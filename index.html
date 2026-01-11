@@ -228,7 +228,7 @@
             <div data-aos="fade-left" data-aos-duration="1000">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-8 leading-snug">הצטרפו למערכת <br><span class="text-[#c5a059]">התפוצה הדיגיטלית</span></h2>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">קבלו תוכן איכותי שבועי הכולל הלכות אקטואליות, מאמרי הגות מאת הרב עמוס חדד שליט"א וסיפורים מחזקים.</p>
-                <!-- שמירה על מבנה ה-form המקורי -->
+                <!-- Form Structure -->
                 <form onsubmit="handleForm(event, 'email-top')" class="space-y-6">
                     <div class="relative group">
                         <input type="email" id="email-top" placeholder="הכנס כתובת מייל" class="animated-input w-full bg-white/50 py-5 px-4 outline-none text-lg rounded-t-lg" required>
@@ -264,7 +264,7 @@
                     <p class="text-[#c5a059] font-medium text-sm mb-4 italic">מחבר ספר 'וכבדתם'</p>
                     <p class="text-gray-500 text-sm">הרצאה שבועית המקיפה את כל רבדי המצווה.</p>
                 </div>
-                <!-- Lecturer Idea 1 -->
+                <!-- Placeholder Card 1 -->
                 <div class="glass-card p-8 rounded-3xl text-center group" data-aos="zoom-in-up" data-aos-delay="200">
                     <div class="w-24 h-24 bg-gray-50 rounded-full mx-auto mb-6 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-12 h-12 text-gray-400 group-hover:text-gray-600 transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
@@ -273,7 +273,7 @@
                     <p class="text-gray-400 text-sm mb-4 italic">הצעה לשיעור</p>
                     <p class="text-gray-500 text-sm">שיחות על אמונה וכיבוד הורים כפתח לישועות.</p>
                 </div>
-                <!-- Lecturer Idea 2 -->
+                <!-- Placeholder Card 2 -->
                 <div class="glass-card p-8 rounded-3xl text-center group" data-aos="zoom-in-up" data-aos-delay="300">
                     <div class="w-24 h-24 bg-gray-50 rounded-full mx-auto mb-6 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-12 h-12 text-gray-400 group-hover:text-gray-600 transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
@@ -285,9 +285,8 @@
             </div>
         </section>
 
-        <!-- Final CTA Section (Bottom Join) -->
+        <!-- Final Join Section -->
         <section id="join-section" class="py-24 bg-white rounded-[50px] shadow-2xl shadow-gray-200 border border-gray-100 text-center px-6 overflow-hidden relative" data-aos="fade-up" data-aos-offset="200">
-            <!-- Animated decorative circles -->
             <div class="absolute top-0 right-0 w-64 h-64 bg-[#c5a059] opacity-5 rounded-full -mr-32 -mt-32 animate-[spin_10s_linear_infinite]"></div>
             <div class="absolute bottom-0 left-0 w-48 h-48 bg-[#0f172a] opacity-5 rounded-full -ml-24 -mb-24 animate-[pulse_4s_infinite]"></div>
             
@@ -323,27 +322,27 @@
     </footer>
 
     <script>
-        // Initialize AOS animations with enhanced settings
+        // Init AOS
         AOS.init({
             duration: 1000,
-            easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)', // Smoother easing
+            easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
             once: true,
-            offset: 50, // Trigger earlier
+            offset: 50,
             mirror: false
         });
 
-        // פונקציה לניהול השליחה לטופס
+        // Form Submission Redirect
         function handleForm(event, inputId) {
-            event.preventDefault(); // מונע מהדף להתרענן
+            event.preventDefault(); 
             const emailValue = document.getElementById(inputId).value;
-            // קישור הטופס הציבורי שלך
-            const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfB2Nf_8R_U5A7i4R_U9J6ORs6FgQylyM/viewform";
+            // The verified form URL
+            const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd5Ils27XNJukgdzm7GTN4QBN7VtgFznRFJawXgom0O-WE1Bg/viewform?usp=header";
             
-            // פתיחת הטופס בחלון חדש
+            // Open in new tab
             window.open(formUrl, '_blank');
         }
 
-        // Smooth scroll for anchor links
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
